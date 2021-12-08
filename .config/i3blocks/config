@@ -1,0 +1,32 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=30
+
+[cpu_usage]
+command=$SCRIPT_DIR/cpu_usage
+interval=10
+LABEL= 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+COLOR_NORMAL=#CCCCCC
+COLOR_WARN=#CCCCCC
+COLOR_CRIT=#FF0000
+
+[memory]
+command=$SCRIPT_DIR/memory
+label=
+interval=30
+
+[time]
+command=date '+%d. %b %H:%M '
+interval=1
